@@ -1,7 +1,7 @@
 export function Course({ name, address, src, alt }) {
   return (
     <div>
-      <p>{name}   sss </p>
+      <p>{name}   ss  s </p>
       <p>{address}</p>
       <div>
         <img src={src} alt={`${alt}`} />
