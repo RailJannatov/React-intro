@@ -6,7 +6,7 @@ export function Course({ name, address, src, alt }) {
       <p>{name}   ss  s </p>
 
       <p>teetsf</p>
-      <p>{address}</p>
+      <p>{  address  }   wfwfwfw</p>
       <div>
 
 
