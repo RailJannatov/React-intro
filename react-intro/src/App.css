@@ -3,3 +3,8 @@
   flex-direction: column;
   gap: 24px;
 }
+
+
+body{
+  background-color: rgb(182, 178, 178);
+}
