@@ -1,16 +1,25 @@
-import "./App.css";
-import { Counter } from "./components/Counter";
+import './App.css';
+import { useState } from 'react';
 
+import UserContext from './components/userContext';
+
+import Header from './components/Header';
+import Order from './components/Order';
+
+// props drilling
+// context
 
 function App() {
+  const [cart, setCart] = useState([]);
   return (
-    <div className="test">
-      <Counter/>
-      <div className="alignment">
-        {/* <Course name="Turing" address='Axundov parki' src={'/images.png'} />
-        <Course name="Code Academy" address='28' src={'/images.png'} />
-        <Course name="Div Academy" address='Metbuat' src={'/images.png'} /> */}
-      </div>
+    <div className='test'>
+      <UserContext.Provider value={{ cart, setCart }}>
+          <Header />
+          <Order />
+        </UserContext.Provider>
+        {/* <Footer /> */}
+      {/* <Assets/>
+      <Users/> */}
     </div>
   );
 }

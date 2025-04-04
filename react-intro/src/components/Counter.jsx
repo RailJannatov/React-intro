@@ -1,12 +1,14 @@
-import React, { useEffect } from "react";
+import React from 'react';
 
-import InputUi from "./InputUi";
+import InputUi from './InputUi';
 
 export const Counter = () => {
   const [counter, setCounter] = React.useState(0);
   const [advanceCounter, setAdvanceCounter] = React.useState(0);
-  const [inputValue, setInputValue] = React.useState("");
+  const [inputValue, setInputValue] = React.useState('');
   const [visible, setVisible] = React.useState(false);
+
+  
 
   // const [anotherValue,setAnotherValue] = React.useState(0);
 
@@ -43,15 +45,6 @@ export const Counter = () => {
     setInputValue(event.target.value);
   };
 
-  useEffect(() => {
-    console.log("mounting");
-    alert("mounting");
-  }, []);
-
-  useEffect(() => {
-    alert("advanceCounter");
-  }, []);
-
   return (
     <>
       <div>
@@ -67,7 +60,9 @@ export const Counter = () => {
         <button onClick={handleAdvanceDecrement}>-</button>
       </div>
       {inputValue}
-      <button onClick={() => setVisible((prev) => !prev)}>{visible ? 'close input' : 'open input'}</button>
+      <button onClick={() => setVisible((prev) => !prev)}>
+        {visible ? 'close input' : 'open input'}
+      </button>
       {visible && <InputUi handleInputValue={handleInputValue} />}
     </>
   );
